@@ -29,5 +29,12 @@ Instance(wght=700, wdth=100)
 ## Installation
 
 ```sh
-pip install hellbox-instancer
+hell add hellbox-instancer
+```
+
+## Development
+
+```sh
+uv sync
+uv run pytest
 ```
