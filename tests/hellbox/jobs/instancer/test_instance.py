@@ -17,8 +17,10 @@ class TestInstance:
         file.copy.return_value = copy
         hinted_font = MagicMock()
 
-        with patch("hellbox.jobs.instancer.instance.ttLib") as mock_ttlib, \
-             patch("hellbox.jobs.instancer.instance.instancer") as mock_instancer:
+        with (
+            patch("hellbox.jobs.instancer.instance.ttLib") as mock_ttlib,
+            patch("hellbox.jobs.instancer.instance.instancer") as mock_instancer,
+        ):
             mock_font = MagicMock()
             mock_ttlib.TTFont.return_value = mock_font
             mock_instancer.instantiateVariableFont.return_value = hinted_font
